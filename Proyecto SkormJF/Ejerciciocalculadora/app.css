@@ -1,0 +1,11 @@
+.invalido{
+    border: 6px double red;
+    width: 100px;
+    height: 25px;
+}
+
+.valido{
+    border: 6px double green;
+    width: 100px;
+    height: 25px;
+}
