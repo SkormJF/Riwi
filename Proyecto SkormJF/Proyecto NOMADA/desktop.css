@@ -1,0 +1,188 @@
+
+.input{
+    width: 100%;
+}
+
+.flag{
+    height: 20px;
+    width: 20px;
+}
+
+body{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav ul{
+    font-size: 1.8rem;
+}
+
+header nav ul li{
+    transition: 1s ease;
+}
+
+header nav ul li svg{
+    height: 100px;
+    width: 100%
+}
+
+header nav ul li svg #M{
+    transition: 0.3 ease;
+}
+
+header nav ul li svg:hover #M{
+    transform: scale(1.4) translate(-270px , -270px);
+    transition: 1s ease;
+}
+
+header nav ul li:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #aaa;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+body{
+    animation: cursoranima 0.6s infinite;
+}
+
+@keyframes cursoranima{
+    0%{
+        cursor: url('./Img/0.gif'), auto;
+    }
+    20%{
+        cursor: url('./Img/1.gif'), auto;
+    }
+    40%{
+        cursor: url('./Img/2.gif'), auto;
+    }
+    60%{
+        cursor: url('./Img/3.gif'), auto;
+    }
+    80%{
+        cursor: url('./Img/4.gif'), auto;
+    }
+    100%{
+        cursor: url('./Img/5.gif'), auto;
+    }
+}
+
+main section figure figure img:hover{
+    transform: scale(1.04);
+    transition: 1S ease;
+}
+
+.home-slider{
+    height: 750px;    
+}
+
+.slider-move img{
+    height: 700px;
+}
+
+main section figure figure img:hover{
+    transform: scale(1.04);
+    transition: 1S ease;
+}
+
+.mensaje-1{
+    font-size: 2.8rem; 
+}
+
+.mensaje-2 h2 {
+    font-size: 2.6rem;
+}
+
+.mensaje-2 p {
+    font-size: 1.8rem;
+}
+
+.productosnom{
+    flex-wrap: nowrap;
+}
+
+.productosnom nav ul li ul li{
+    display: inline-block;
+}
+
+.productosnom nav ul li .circle-cateogry{
+    width: 80px;
+    height: 80px;
+}
+
+.space{
+    height: 250px;
+}
+
+.acerca-de{
+    height: 500px;
+    flex-wrap: nowrap;  
+}
+
+.gif-año img{
+    height: 500px;
+    width: 400px;
+    border-radius: 5%;
+    transition: 1s ease;
+}
+
+.mensaje-3{
+    height: 500px;
+    width: 60%;
+    border-radius: 0% 20% 20% 0%;
+}
+
+.mensaje-3 p{
+    font-size: 2rem;
+}
+
+.gif-año img:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+.reseñas-clientes{
+    height: 450px;
+    font-size: 2rem;
+    flex-wrap: nowrap;
+}
+
+.reseña-1 figure img{
+    transition: 0.3s ease;
+}
+
+.reseña-1 figure img:hover{
+    transform: scale(1.08);
+    transition: 0.3s ease;
+}
+
+footer nav ul {
+    font-size: 1.8rem;
+}
+
+footer nav ul li{
+    transition: 1s ease;
+}
+
+footer nav ul li svg{
+    height: 100px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+footer nav ul li svg #M{
+    transition: 0.3 ease;
+}
+
+footer nav ul li svg:hover #M{
+    transform: scale(1.4) translate(-270px , -270px);
+    transition: 1s ease;
+}
+
+footer nav ul li:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #aaa;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
