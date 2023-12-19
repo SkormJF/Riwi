@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --negro:black;
+    --oscuro:#00226b;
+    --azul:#00e1ff;
+    --blanco:#fff;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('./img/Colombia.jpg');
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.botones{
+    width: 200px;
+    height: 30px;
+    font-size: 1.3rem;
+    color: var(--oscuro);
+    border-radius: 8%;
+    background-color: var(--azul);
+    border: 2px solid var(--oscuro);
+    transition: 0.7s ease;
+}
+.nav_gasto{
+    position: fixed;
+    display: none;
+    justify-content: left;
+    bottom: 15px;
+    font-size: 2.3rem;
+    color: var(--oscuro);
+}
+.botones:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+.inicio{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.espacio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50px;
+}
+.casos{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    color: var(--negro);
+    font-size: 1.9rem;
+    text-align: center;
+    text-shadow: 2px 2px 1px var(--azul);
+}
+.contenedor-img{
+    width: 30%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: 0.7s ease;
+    border-radius: 2%;
+}
+.contenedor-img:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+.contenedor-img figure{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-img figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-out;
+}
+.contenedor-img figure .emergente{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contenedor-img figure:hover > .emergente{
+    opacity: 1;
+    visibility: visible;
+}
+.emergente h2{
+    font-size: 2.2rem;
+    color: var(--blanco);
+    text-shadow: none;
+}
+#caso_1{
+    display: none;
+}
+#caso_2{
+    display: none;
+}
+#caso_3{
+    display: none;
+}
+#caso_4{
+    display: none;
+}
+#caso_5{
+    display: none;
+}
+#caso_6{
+    display: none;
+}
+#verde{
+    display: none;
+}
+#rojo{
+    display: none;
+}
+#azul{
+    display: none;
+}
+#boton_2{
+    display: none;
+}
+#boton_3{
+    display: none;
+}
+#boton_4{
+    display: none;
+}
+#boton_5{
+    display: none;
+}
+#boton_6{
+    display: none;
+}
+#boton_7{
+    display: none;
+}
+#boton_8{
+    display: none;
+}
+#boton_9{
+    display: none;
+}

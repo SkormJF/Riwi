@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACONDO_Caso_1</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+
+    <header class="inicio">
+        
+        <button class="botones" onclick="recorrido(1)">INICIA TU VIAJE</button>
+       
+    </header>
+    <main>
+        <section class="nav_gasto" id="gasto">
+            El dinero que tienes disponible es: 
+            <span id="gasto_total">2500000</span>                
+        </section>
+        <section class="casos" id="caso_1">
+            <h3>Sales de viaje un viernes por la noche, te pagan justo ese dia
+               un monto por un valor de 2'500.000 millones de pesos.
+               Al llegar al aeropuerto el Dorado de Bogota, te das 
+               cuenta que tienes una escala en Medellin, y tienes hambre
+               ¿que opcion eliges?
+            </h3>
+            <div class="contenedor-img" onclick="respuesta(1)">
+                <figure>
+                    <img src="./img/almojabana.jpeg" alt="" id="img1_caso1">
+                    <div class="emergente" id="ocultar_1">
+                        <h2 id="res1_caso1">
+                            La almojabana con gaseosa te costara 15 mil pesos
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="respuesta(2)">
+                <figure>
+                    <img src="./img/hambre.avif" alt="" id="img2_caso1">
+                    <div class="emergente" id="ocultar_2">
+                        <h2 id="res2_caso1">
+                            No comprar nada de momento
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="respuesta(3)">
+                <figure>
+                    <img src="./img/subway.jpg" alt="" id="img3_caso1">
+                    <div class="emergente" id="ocultar_3">
+                        <h2 id="res3_caso1">
+                            El subway con gaseosa te costara 23 mil pesos
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(2)" id="boton_2">CONTINUAR RECORRIDO</button>
+        </section>
+        
+        <section class="casos" id="caso_2">
+            <h3>
+                Cuando llegas a la sala de espera, tu maleta es muy grande para
+                las dimensiones que exige la aerolinea, deberas sacar algo de 
+                ropa para ajustar las dimensiones de tu maleta, ¡vamos a hacerlo!
+            </h3>
+            <h3 id="msg1_caso2">
+                las dimensiones acutales de tu maleta son
+            </h3>
+            <h3>
+                alto: 
+                <span id="alto"> 60 cm</span>
+            </h3>
+            <h3>
+                largo:
+                <span id="largo"> 40 cm</span>
+            </h3>
+            <h3>
+                ancho:
+                <span id="ancho"> 20 cm</span>
+            </h3>
+            <div class="contenedor-img" onclick="reducir_maleta()">
+                <figure>
+                    <img src="./img/maleta_grande.jpeg" alt="" id="img1_caso2">
+                    <div class="emergente" id="ocultar_4">
+                        <h2 id="res1_caso2">
+                            Dale click aqui para reducir tu maleta
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(3)" id="boton_3">CONTINUAR RECORRIDO</button>
+        </section>
+
+        <section class="casos" id="caso_3">
+            <h3>
+                Ahora debes abordar tu avion, falta tiempo pero debes asegurar tu reserva en el hotel
+                y el wi-fi esta fallando, caminas por el aeropuerto y encuentras una red wi-fi
+                con una contraseña cifrada, para decifrarla debes pagar 50 mil pesos y solo puedes usarla una hora
+            </h3>
+            <h3 id="msg_contraseña">
+                La contraseña cifrada es:
+            </h3>
+            <h3 id="contraseña">
+                01110010 01101001 01110111 01101001                
+            </h3>
+            <div class="contenedor-img" onclick="descifrar_contraseña()">
+                <figure>
+                    <img src="./img/binario.jpeg" alt="" id="img1_caso3">
+                    <div class="emergente" id="ocultar_5">
+                        <h2 id="res1_caso3">
+                            Dale click para descifrar la contraseña
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(4)" id="boton_4">CONTINUAR RECORRIDO</button>
+        </section>
+
+        <section class="casos" id="caso_4">
+            <h3>
+                Al llegar a macondo caes en cuenta que hablan un lenguaje particular,
+                cambian todas sus vocales por la i, necesitas llegar al hotel y pides un taxi, 
+                pero el taxista te mira asi al decirle
+            </h3>
+            <h3 id="cambiar_idioma">taxi me puede llevar al hotel mariposas amarillas</h3>
+            <div class="contenedor-img" onclick="cambiar_idioma()">
+                <figure>
+                    <img src="./img/no_entender.jpg" alt="" id="img1_caso4">
+                    <div class="emergente" id="ocultar_6">
+                        <h2 id="res1_caso4">
+                            Dale click para hablar en su idioma
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(5)" id="boton_5">CONTINUAR RECORRIDO</button>
+        </section>
+
+        <section class="casos" id="caso_5">
+            <h3>
+                Al llegar al hotel el taxista te cobra la suma de 300 mil pesos, asi que empiezas
+                a negociar con el taxista, y proponen un unico juego de piedra, papel o tijera, si el taxista
+                gana le pagas los 300 mil pesos, si pierde no le pagas nada y si empatan no pasara nada.
+            </h3>
+            <div class="contenedor-img" onclick="eleccion(1)">
+                <figure>
+                    <img src="./img/piedra.jpg" alt="" id="img1_caso5">
+                    <div class="emergente" id="ocultar_7">
+                        <h2 id="res1_caso5">
+                            Tu eleccion de juego sera piedra
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="eleccion(2)">
+                <figure>
+                    <img src="./img/papel.jpg" alt="" id="img2_caso5">
+                    <div class="emergente" id="ocultar_8">
+                        <h2 id="res2_caso5">
+                            Tu eleccion de juego sera papel
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="eleccion(3)">
+                <figure>
+                    <img src="./img/tijera.webp" alt="" id="img3_caso5">
+                    <div class="emergente" id="ocultar_9">
+                        <h2 id="res3_caso5">
+                            Tu eleccion de juego sera tijera
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(6)" id="boton_6">ULTIMO RECORRIDO</button>
+        </section>
+
+        <section class="casos" id="caso_6">
+            <h3>
+                Ya una vez estas dentro del hotel, habran actividades para cada uno de los 4 dias que estaras
+                y aparte tienen un codigo de vestimenta  de colores para cada dia
+            </h3>
+            <h3>
+                Iniciamos con el dia amarillo, es momento de ir a la piscina, aunque huele algo raro ¿que haras?
+            </h3>
+            <div class="contenedor-img" onclick="decision(1)">
+                <figure>
+                    <img src="./img/dentro_piscina.jpg" alt="" id="img1_caso6">
+                    <div class="emergente" id="ocultar_10">
+                        <h2 id="res1_caso6">
+                            Esta opcion sera para darte un baño en la piscina
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="decision(2)">
+                <figure>
+                    <img src="./img/fuera_piscina.jpg" alt="" id="img2_caso6">
+                    <div class="emergente" id="ocultar_11">
+                        <h2 id="res2_caso6">
+                            Esta opcion es para estar fuera de la piscina disfrutando del dia
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(7)" id="boton_7">SIGUIENTE DIA</button>
+        </section>
+
+        <section class="casos" id="verde">
+            <h3>
+                En este dia de verde, iremos de caminata por macondo, el recorrido es bastante largo, ¿que haras?
+            </h3>
+            <div class="contenedor-img" onclick="caminata(1)">
+                <figure>
+                    <img src="./img/caminata.jpg" alt="" id="img1_verde">
+                    <div class="emergente" id="ocultar_12">
+                        <h2 id="res1_verde">
+                            Seguiras la caminata
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="caminata(2)">
+                <figure>
+                    <img src="./img/caminata.jpg" alt="" id="img2_verde">
+                    <div class="emergente" id="ocultar_13">
+                        <h2 id="res2_verde">
+                            Llegas hasta cierto punto y te devuelves solo
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(8)" id="boton_8">SIGUIENTE DIA</button>
+        </section>
+
+        <section class="casos" id="rojo">
+            <h3>
+                Es momento del dia rojo, tocan actividades en la playa ¿que eliges?
+            </h3>
+            <div class="contenedor-img" onclick="playa(1)">
+                <figure>
+                    <img src="./img/malla.webp" alt="" id="img1_rojo">
+                    <div class="emergente" id="ocultar_14">
+                        <h2 id="res1_rojo">
+                            jugar voleibol
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="playa(2)">
+                <figure>
+                    <img src="./img/mar.jpg" alt="" id="img2_rojo">
+                    <div class="emergente" id="ocultar_15">
+                        <h2 id="res2_rojo">
+                            nadar en el mar
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="playa(3)">
+                <figure>
+                    <img src="./img/coctel.jpg" alt="" id="img3_rojo">
+                    <div class="emergente" id="ocultar_16">
+                        <h2 id="res3_rojo">
+                            tomar cocteles
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+
+        </section>
+
+        <section class="espacio">
+            <button class="botones" onclick="recorrido(9)" id="boton_9">ULTIMO DIA</button>
+        </section>
+
+        <section class="casos" id="azul">
+            <h3>
+                Y es momento del ultimo dia, el dia de azul, hoy son actividades dentro del hotel ¿que haras?
+            </h3>
+            <div class="contenedor-img" onclick="hotel(1)">
+                <figure>
+                    <img src="./img/jugar_bingo.jpg" alt="" id="img1_azul">
+                    <div class="emergente" id="ocultar_17">
+                        <h2 id="res1_azul">
+                            Jugar bingo
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="hotel(2)">
+                <figure>
+                    <img src="./img/pista.jpg" alt="" id="img2_azul">
+                    <div class="emergente" id="ocultar_18">
+                        <h2 id="res2_azul">
+                            Bailar
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <div class="contenedor-img" onclick="hotel(3)">
+                <figure>
+                    <img src="./img/casino.jpg" alt="" id="img3_azul">
+                    <div class="emergente" id="ocultar_19">
+                        <h2 id="res3_azul">
+                            Ir al casino
+                        </h2>
+                    </div>
+                </figure>
+            </div>
+            <h3 id="resultado"></h3>
+        </section>
+
+        
+
+    </main>
+    
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
