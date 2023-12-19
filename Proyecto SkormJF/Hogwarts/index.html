@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGWARTS</title>
+    <link rel="stylesheet" href="./app.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+</head>
+<body>
+    <section class="intro_juego">
+        <h1 class="titulo">Harry Potter</h1>
+        <h2 class="subtitulo">And Riwi's games</h2>
+        <button class="btn-inicio" onclick="start()">START</button>
+    </section>
+    <figure class="logo">
+        <img src="./img/Logo.png" alt="" class="img_logo">
+    </figure>
+
+    <section class="container" id="container">
+        <div class="book-content">
+            <div class="book">
+                <div class="face-front" id="portada">
+                    <p class="text-gradient">Este es el diario de TOM RIDDLE</p>
+                    <br>
+                    <p class="text-gradient">abreme para iniciar nuestra aventura</p>
+                </div>
+                <div class="face-back" id="trsf">
+                    <p>
+                        Para iniciar quisiera saber quien es la persona que encontro mi libro, cual es
+                        su familia y si tiene la edad para poder usmear mis paginas
+                    </p>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                   <input type="text" id="nombre" placeholder="Ingresa tu nombre" class="btn">
+                   <input type="text" id="familia" placeholder="Ingresa tu familia" class="btn">
+                   <input type="text" id="edad" placeholder="Ingresa tu edad" class="btn">
+                   <button class="btn esconder_0" onclick="guardar()">GUARDAR</button>
+                </div>
+                <div class="face-back">
+                    <p>Has sido aceptado en la prestigiosa escuela de magia
+                        y hechiceria de HOGWARTS, es momento de encaminar tu
+                        destino, pronto comenzara la ceremonia del sombrero seleccionador
+                        pero antes debemos elegir tus cualidades y tu linaje
+                    </p>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <h1>CUALIDADES</h1>
+                    <button class="btn esconder_1" onclick="cualidades(1)">Valor, Fuerza, Audacia</button>
+                    <button class="btn esconder_2" onclick="cualidades(2)">Justicia, Lealtad, Paciencia</button>
+                    <button class="btn esconder_3" onclick="cualidades(3)">Creatividad, Erudicion, Inteligencia</button>
+                    <button class="btn esconder_4" onclick="cualidades(4)">Ambicion, Determinacion, Astucia</button>
+                </div>
+                <div class="face-back">
+                    <h1>LINAJE</h1>
+                    <button class="btn esconder_5" onclick="linaje(1)">Mestizo</button>
+                    <button class="btn esconder_6" onclick="linaje(2)">Muggle</button>
+                    <button class="btn esconder_7" onclick="linaje(3)">Sangre Pura</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <p>Es el momento de la seleccion, ve a sentarte para que 
+                        te pongan el sombrero seleccionador y ver casa te depara
+                        el destino
+                    </p>
+                </div>
+                <div class="face-back">
+                    <figure class="img">
+                        <img src="./img/sombrero.png" alt="" class="img">
+                    </figure>
+                    <p>Sombrero seleccionador</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <p>¡MMM DIFICIL!, si muy dificil, tienes varias cualidades que podria
+                        ubicarte en esta casa, aunque tu corazon apunta a otro lado, ¿donde te pondre?...
+                        ¡AH! ya se, tu seras de
+                    </p>
+                    <h1 id="seleccion" class="text-gradient_1"></h1>
+                </div>
+                <div class="face-back">
+                    <p>Ahora vamos a tu primer dia de clases, debes iniciar
+                        con la clase de transformaciones, alla conoceras a tu profesor
+                        y nuevos encantamientos que podrian resultarte, hoy aprenderas a 
+                        enfrentarte a los boggart, criaturas magicas que se transforman en aquello 
+                        que mas temes, enfrentarlos es facil solo debes usar el encantamiento
+                    </p>
+                    <h1>RIDDIKULUS</h1>
+                    <p>veamos si te tocara enfrentar uno hoy...</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <figure class="img">
+                        <img src="./img/slughorn.jpg" alt="" class="img">
+                    </figure>
+                    <p>Profesor Kevin Slughorn</p>
+                </div>
+                <div class="face-back">
+                    <div class="enfrentar">
+                        <p id="enfrentar_texto">Vaya te ha salido un boggart, no tengas miedo,
+                            no puede hacerte daño, es hora de enfrentar 
+                            esas pesadillas
+                        </p>
+                        <button class="btn text-gradient_1" onclick="enfrentar()" id="enfrentar_boton">RIDDIKULUS</button>
+                    </div>
+                    <div class="no-enfrentar">
+                        <p>De momento no te ha salido un boggart, pero practica tu hechizo
+                            por si te toca usarlo en algun momento
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <figure class="img">
+                        <img src="" alt="" class="img" id="enfrentar">
+                    </figure>
+                </div>
+                <div class="face-back">
+                    <p>Ahora es momento de elegir tu siguiente clase, elige sabiamente...</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <h1>CLASES</h1>
+                    <button class="btn esconder_8" onclick="clase(1)">Herbologia</button>
+                    <button class="btn esconder_9" onclick="clase(2)">Pociones</button>
+                    <button class="btn esconder_10" onclick="clase(3)">Defensa contra las artes oscuras</button>
+                    <button class="btn esconder_11" onclick="clase(4)">Encantamientos</button>
+                    <button class="btn esconder_12" onclick="clase(5)">Animales magicos</button>
+                    <button class="btn esconder_13" onclick="clase(6)">Historia de la magia</button>
+                </div>
+                <div class="face-back">
+                    <p id="texto_clase"></p>
+                    <button class="btn esconder_14 text-gradient_1" onclick="patronus()">EXPECTO PATRONUS</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <figure class="img">
+                        <img src="" alt="" class="img" id="img_clase">
+                    </figure>
+                    <p id="profesor"></p>                    
+                </div>
+                <div class="face-back">
+                    <p id="texto_dementor"></p>
+                    <button class="btn esconder_15 text-gradient_1" onclick="dementor(1)">CORRE</button>
+                    <button class="btn esconder_16 text-gradient_1" onclick="dementor(2)">EXPECTO PATRONUM</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <figure class="img">
+                        <img src="./img/dementor.webp" alt="" class="img" id="dementor">
+                    </figure>
+                </div>
+                <div class="face-back">
+                    <p>Has llegado al final de la aventura, veamos un resumen de tu pasa por HOGWARTS</p>
+                    <button class="btn text-gradient_1" onclick="resumen()">RESUMEN</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <div class="face-front">
+                    <p id="resumen"></p>
+                </div>
+                <div class="face-back" id="portada-back">
+                    <p class="text-gradient">NOS VEREMOS DESPUES</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

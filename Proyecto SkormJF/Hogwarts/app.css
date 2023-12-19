@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Harry Potter', sans-serif;                                        
+}
+:root{
+    --negro: black;
+    --verde: rgb(3, 116, 3);
+    --papiro: rgb(248, 212, 157);
+    --blanco: #fff;
+}
+
+body{
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('./img/video.gif');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100%-100vw)/2)); CODIGO DE VIDEO COMO FONDO
+    z-index: -2;
+} */
+
+.intro_juego{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 570px;
+}
+
+.intro_juego h1{
+    font-size: 13rem;
+    text-shadow: 2px 2px 2px var(--verde)
+}
+
+.intro_juego h2{
+    font-size: 5rem;
+    text-shadow: 2px 2px 2px var(--verde);
+}
+
+.btn-inicio{
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px var(--verde);
+    border:none ;
+    animation: btn 2s ease-out 0s;
+    cursor: pointer;
+}
+
+.logo{
+    position:fixed;
+    width: 81%;
+    background-color: rgba(255,255,255,0.0);
+    bottom: 10px;
+    display: flex;
+    justify-content:right; 
+}
+
+.img_logo{
+    width: 11%;
+    height: 168px;
+}
+
+.img{
+    width: 90%;
+    height: 80%;
+    border-radius: 6%;
+}
+
+@keyframes titulo{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes subtitulo{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes btn{
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.titulo{
+    animation: titulo 5s ease-out 0s;
+}
+
+.subtitulo{
+    animation: subtitulo 5s ease-out 0s;
+}
+
+/* LIBRO */
+.btn{
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 2.5rem;
+    border:none ;
+    cursor: pointer;
+}
+
+p{
+    margin-top: 10px;
+    text-align: center;
+    padding: 25px;
+}
+
+.container, .book-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    animation: btn 4s ease-out 0s;
+}
+
+.book-content{
+    width: 65%;
+    min-width: 250px;
+    max-width: 730px;
+    height: 490px;
+    position: relative;
+    perspective: 1000px; /* buscar esto */
+    transition: 1s;
+}
+
+.book{
+    position: absolute;
+    width: 75%;
+    height: 115%;
+    transition: 1s;
+    transform-style: preserve-3d; /* buscar esto */
+    transform-origin: left; /* buscar esto */
+}
+
+.face-front, .face-back{
+    width: 100%;
+    height: 100%;
+    background: var(--papiro);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+.face-front{
+    box-shadow: inset 3px 0px 20px -7px black;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+}
+
+.face-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-1px) rotateY(180deg);
+    box-shadow: inset -3px 1px 20px -7px black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#portada{
+    background-image: url("./img/portada.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portada-back{
+    background-image: url("./img/portada.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portada, #portada-back{
+    background-size: 100% 100%;
+}
+
+.text-gradient{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left, #fff, #f3a55c, #ec6a1e, #f3a55c, #fff);    
+    animation: color 3s linear infinite;
+    background-size: 500%;   
+    font-size: 3rem; 
+}
+
+.text-gradient_1{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left, black, #f3a55c, #ec6a1e, #f3a55c, black);    
+    animation: color 3s linear  infinite;
+    background-size: 500%;   
+    font-size: 3rem; 
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enfrentar{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.no-enfrentar{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* CLASES QUE SE AGREGAN CON JAVASCRIPT */
+
+.trnsf{
+    transform: translateX(250px);
+}
+
+.trnsf-reset{
+    transform: translateX(0px);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./app.css">
+    <title>Document</title>
+</head>
+<body id="body" class="dark">
+    <main>
+        <section>
+            <div class="container">
+                <div class="row m-2">
+                    <div class="col-md-6">
+                        <select class="form-select" aria-label="Default select example" id="tema" onchange="cambiar_tema()">
+                            <option selected disabled id="select_tema">Cambiar tema</option>
+                            <option value="dark" id="dark">Obscuro</option>
+                            <option value="light" id="light">Claro</option>
+                          </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select" aria-label="Default select example" id="idioma" onchange="cambiar_idioma()">
+                            <option selected disabled id="select_idioma">Cambiar idioma</option>
+                            <option value="es" id="es">Español</option>
+                            <option value="en" id="en">Ingles</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-1.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_1">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-2.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_2">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning">COMPRAR</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-3.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_3">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-4.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_4">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-5.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_5">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-6.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_6">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-7.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_7">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card centrar-items centrar-texto">
+                            <figure>
+                                <img src="./img/hamburguesa-8.webp" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="card-body">
+                              <h5 class="card-title">$ 27.900</h5>
+                              <h5 class="card-title">BIG BOX NUGGETS</h5>
+                              <p class="card-text" id="producto_8">5 nuggets + 5 hot wings(las alistas picantes hot wings equivalen a un trozo de ala)
+                                + 1 ensalada colsaw personal + 1 papa pequeña + 1 gaseosa pet 400 ml + 1 salsa bbq
+                              </p>
+                              <a class="btn btn-warning" >COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
